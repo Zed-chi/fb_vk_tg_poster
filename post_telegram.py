@@ -15,7 +15,7 @@ def check_bot(bot):
 def post(text_path=None, image_path=None):
     if not text_path or not image_path:
         return None
-    text = utils.get_text_content(text_path)
+    text = utils.get_file_content(text_path)
     bot = telegram.Bot(TOKEN)
     if len(text) < 100:
         caption = text

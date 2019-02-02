@@ -49,8 +49,8 @@ def upload_image(image_content):
 
 
 def post(text_path=None, image_path=None):
-    image_file = utils.get_image_content(image_path)
-    text = utils.get_text_content(text_path)
+    image_file = utils.get_file_content(image_path, file_type="image")
+    text = utils.get_file_content(text_path)
     upload = upload_image(image_file)
     if upload.ok:
         id = upload.json()["id"]

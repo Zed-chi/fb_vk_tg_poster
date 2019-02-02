@@ -24,7 +24,7 @@ def post(text_path=None, image_path=None):
         photo[0]['owner_id'],
         photo[0]['id'],
     )
-    text = utils.get_text_content(text_path)
+    text = utils.get_file_content(text_path)
     vk.wall.post(
         owner_id=int("-{}".format(GROUP_ID)),
         message=text,
