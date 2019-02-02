@@ -3,3 +3,4 @@
 *.txt
 *.jpeg
 !requirements.txt
+__pycache__
