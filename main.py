@@ -6,10 +6,10 @@ import utils
 
 
 if __name__ == "__main__":
-	load_dotenv()
+    load_dotenv()
     args = utils.get_args()
-    text = args["path_to_text"] or exit("Empty path to text")
-    image = args["path_to_image"] or exit("Empty path to image")
+    text = args.path_to_text or exit("Empty path to text")
+    image = args.path_to_image or exit("Empty path to image")
     fb_post(text_path=text, image_path=image)
     tg_post(text_path=text, image_path=image)
     vk_post(text_path=text, image_path=image)
