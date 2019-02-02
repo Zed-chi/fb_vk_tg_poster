@@ -4,8 +4,8 @@ import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t", "path_to_text", help="path to txt file")
-    parser.add_argument("-i", "path_to_image", help="path to image file")
+    parser.add_argument("-t", dest="path_to_text", help="path to txt file")
+    parser.add_argument("-i", dest="path_to_image", help="path to image file")
     return parser.parse_args()
 
 
