@@ -9,10 +9,10 @@ def get_args():
     return parser.parse_args()
 
 
-def get_file_content(path, type="text"):
+def get_file_content(path, file_type="text"):
     if not os.path.exists(path):
         return None
-    if type is "text":
+    if file_type is "text":
         with open(path, "r") as text_file:
             return text_file.read()
     else:
@@ -21,8 +21,8 @@ def get_file_content(path, type="text"):
 
 
 def get_text_content(path):
-    return get_file_content(path, type="text")
+    return get_file_content(path)
 
 
 def get_image_content(path):
-    return get_file_content(path, type="image")
+    return get_file_content(path, file_type="image")
