@@ -18,11 +18,3 @@ def get_file_content(path, file_type="text"):
     else:
         with open(path, "rb") as image_file:
             return image_file.read()
-
-
-def get_text_content(path):
-    return get_file_content(path)
-
-
-def get_image_content(path):
-    return get_file_content(path, file_type="image")
