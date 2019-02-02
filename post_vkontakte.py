@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 import utils
 
-load_dotenv()
+
 TOKEN = os.getenv("vk_token")
 LOGIN = os.getenv("vk_login")
 ALB_ID = os.getenv("vk_album_id")
@@ -34,6 +34,7 @@ def post(text_path=None, image_path=None):
 
 
 if __name__ == "__main__":
+    load_dotenv()
     args = utils.get_args()
     text_path = args["path_to_text"] or exit()
     image_path = args["path_to_image"] or exit()

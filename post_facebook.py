@@ -3,7 +3,7 @@ import requests
 from dotenv import load_dotenv
 import utils
 
-load_dotenv()
+
 FB_API = "https://graph.facebook.com/"
 FB_GROUP_ID = os.getenv("fb_group_id")
 TOKEN = os.getenv("fb_token")
@@ -60,6 +60,7 @@ def post(text_path=None, image_path=None):
 
 
 if __name__ == "__main__":
+    load_dotenv()
     args = utils.get_args()
     text_path = args["path_to_text"] or exit()
     image_path = args["path_to_image"] or exit()
